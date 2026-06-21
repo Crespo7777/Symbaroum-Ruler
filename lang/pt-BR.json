@@ -1,0 +1,6 @@
+{
+  "drifs-speeds.walk": "1 ação de movimento",
+  "drifs-speeds.run": "2 ações de movimento",
+  "drifs-Movement.Speed": "A velocidade de movimento para 1 ação no mapa de batalha",
+  "drifs-Movement.SpeedHint": "Nota: isso apenas considera o valor de distância da grade (grid), ignorando a unidade de medida."
+}

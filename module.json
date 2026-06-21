@@ -1,12 +1,30 @@
 {
-  "name": "drag-ruler-integration-for-symbaroum",
+  "id": "symbaroum-ruler",
   "title": "Drag Ruler Integration Symbaroum",
-  "description": "It support fixed movement speed",
-  "author": "Surcof, Bithir",
-  "version": "1.1",
-  "minimumCoreVersion": "0.8.8",
+  "description": "Adds support for Drag Ruler speed bands in the Symbaroum system.",
+  "version": "1.2.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  },
   "systems": ["symbaroum"],
-  "compatibleCoreVersion":"0.9.249",
+  "relationships": {
+    "systems": [
+      {
+        "id": "symbaroum",
+        "type": "system"
+      }
+    ],
+    "requires": [
+      {
+        "id": "drag-ruler",
+        "type": "module"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/hookSpeedProvider.js"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -14,21 +32,17 @@
       "path": "lang/en.json"
     },
     {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
       "lang": "it",
       "name": "Italiano",
       "path": "lang/it.json"
     }
   ],
-  "dependencies": [
-    {
-      "name": "drag-ruler",
-      "type": "module",
-      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
-    }],
-    "scripts": [
-      "scripts/hookSpeedProvider.js"
-    ],
-  "url": "https://github.com/Surcof/symbaroum-drag-ruler-integration-main",
-  "manifest": "https://raw.githubusercontent.com/Surcof/symbaroum-drag-ruler-integration-main/master/module.json",
-  "download": "https://codeload.github.com/Surcof/symbaroum-drag-ruler-integration-main/zip/refs/heads/master"
+  "url": "https://github.com/Crespo7777/symbaroum-ruler",
+  "manifest": "https://raw.githubusercontent.com/Crespo7777/symbaroum-ruler/main/module.json",
+  "download": "https://github.com/Crespo7777/symbaroum-ruler/releases/latest/download/symbaroum-ruler.zip"
 }

@@ -1,7 +1,5 @@
-
 Hooks.once('init', async function() {    
-
-    game.settings.register('drag-ruler-integration-for-symbaroum', 'symbaroumMovementSpeed', {
+    game.settings.register('symbaroum-ruler', 'symbaroumMovementSpeed', {
         name: 'drifs-Movement.Speed',
         hint: 'drifs-Movement.SpeedHint',
         scope: 'world',
@@ -21,9 +19,8 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         }
 
         getRanges(token) {
-            const baseSpeed = game.settings.get('drag-ruler-integration-for-symbaroum', 'symbaroumMovementSpeed');
+            const baseSpeed = game.settings.get('symbaroum-ruler', 'symbaroumMovementSpeed');
             
-
             const ranges = [
                 {range: baseSpeed, color: "walk"},
                 {range: baseSpeed*2, color: "run"}
@@ -33,5 +30,5 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         }
     }
 
-    dragRuler.registerModule("drag-ruler-integration-for-symbaroum", SymbaroumSpeedProvider);
-})
+    dragRuler.registerModule("symbaroum-ruler", SymbaroumSpeedProvider);
+});
